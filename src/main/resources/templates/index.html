@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${titulo}"></title>
+</head>
+<body>
+    <h1>Inicio</h1>
+    <div th:if="${personas != null}">
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>email</th>
+                    <th>Telefono</th>
+                    <th>Direccion</th>
+                    <th>ciudad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="persona : ${personas}">
+                    <td th:text="${persona.idPersona}"></td>
+                    <td th:text="${persona.nombre}"></td>
+                    <td th:text="${persona.apellido}"></td>
+                    <td th:text="${persona.email}"></td>
+                    <td th:text="${persona.telefono}"></td>
+                    <td th:text="${persona.direccion}"></td>
+                    <td th:text="${persona.ciudad}"></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
