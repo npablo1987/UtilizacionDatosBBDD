@@ -18,6 +18,8 @@
                     <th>Telefono</th>
                     <th>Direccion</th>
                     <th>ciudad</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +31,8 @@
                     <td th:text="${persona.telefono}"></td>
                     <td th:text="${persona.direccion}"></td>
                     <td th:text="${persona.ciudad}"></td>
-
+                    <td><a th:href="@{/editar/{id}(id=${persona.idPersona})}">Editar</a></td>
+                    <th><a th:href="@{/eliminar/{id}(id=${persona.idPersona})}">Eliminar</a></th>
                 </tr>
             </tbody>
         </table>
